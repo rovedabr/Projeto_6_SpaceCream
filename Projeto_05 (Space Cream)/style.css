@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hue: 233;
+  --bg-primary: hsl(var(--hue), 100%, 97%);
+  --bg-body-before: hsl(var(--hue),17%,62%);
+  --bg-h2: hsl(var(--hue), 91%, 96%);
+  --fc-h1: hsl(0, 0%, 100%);
+  --fc-texting: hsl(var(--hue), 84%, 12%);
+  --fc-h2:hsl(var(--hue), 17%, 35%);
+  --fshadow-h1: hsla(0, 0%, 0%, 0.25);
+  
+  --ff-heading: 'Staatliches', cursive;
+  --ff-texting: 'Palanquin', sans-serif;
+  --fz-h1: 4rem;
+  --fz-h2:2rem;
+  --fz-texting: 1.2rem;
+
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--bg-primary);
+  font-family: var(--ff-texting);
+  color: var(--fc-texting);
+  margin: auto;
+}
+
+body::before {
+  content: '';
+  width:38.4rem;
+  height: 27.9rem;
+  
+  position: absolute;
+  background: var(--bg-body-before);
+
+  z-index: -1;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 38.4rem;
+  height: 199.5rem;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+header img {
+  width: 13.7rem;
+  margin: 3.2rem auto 3.2rem;
+}
+
+header h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: var(--ff-heading);
+  font-size: var(--fz-h1);
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow:rgba(0, 0, 0, 0.25) 0px 2px 2px;
+  color: var(--fc-h1);
+  width: 38.4rem;
+  background: #CBC0D3;
+  padding: 0.8rem;
+}
+
+section {
+  width: 32rem;
+  height: 100%;
+  margin-bottom: 1.3rem;
+}
+
+section p {
+font-family: var(--ff-texting);
+font-size: var(--fz-texting); 
+font-weight: 400;
+color: var(--fc-texting);
+line-height: 1.5rem;
+text-align: center;
+
+width: 30.6rem;
+margin: 5rem auto auto 2rem;
+}
+
+main {
+  display: grid;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  margin-top: 3.2rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 2rem;
+  animation: downtop 500ms 800ms backwards;
+}
+
+.card h2 {
+  font-family: var(--ff-heading);
+  font-size: var(--fz-h2);
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: var(--fc-h2);
+
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+
+
+  width: 11.2rem;
+  height: 3.5rem;
+  background: var(--bg-h2);
+  border-radius: 2rem;
+  padding: 0 2.4rem;
+
+  animation: topdown 500ms 800ms backwards;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(+20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
