@@ -27,7 +27,8 @@ body {
   background: var(--bg-primary);
   font-family: var(--ff-texting);
   color: var(--fc-texting);
-  margin: auto;
+
+  z-index: -1;
 }
 
 body::before {
