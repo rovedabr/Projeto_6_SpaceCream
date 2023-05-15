@@ -1,7 +1,7 @@
 
 # Projeto 06
 
-## Space Cream
+## Space Cream - Loja se sorvetes 
 
 Projeto de programação HTML e CCS.
 
